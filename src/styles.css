@@ -1,0 +1,375 @@
+/* Importing Tailwind CSS */
+@import "tailwindcss";
+
+/* Global Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar-container {
+  @apply bg-gradient-to-r from-[#6A0DAD] to-[#8B0000] text-white p-4 w-full fixed top-0 left-1/2 transform -translate-x-1/2 z-50 rounded-b-lg;
+  height: 55px;
+}
+
+.navbar-links {
+  @apply flex space-x-8 ml-auto;
+}
+
+.navbar-link {
+  @apply text-lg font-medium hover:text-red-500 transition-all duration-300;
+}
+
+
+/* Home Page */
+.home-container {
+  @apply min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-800 text-white;
+}
+
+.home-heading {
+  @apply text-5xl font-extrabold text-center leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-red-600;
+}
+
+.home-description {
+  @apply text-lg text-center max-w-xl mb-8 opacity-85;
+}
+
+.home-button {
+  @apply bg-gradient-to-r from-purple-700 to-purple-800 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-gradient-to-l from-purple-600 to-purple-700 shadow-lg;
+}
+
+.home-button:hover {
+  @apply shadow-2xl;
+}
+
+.home-buttons-container {
+  @apply flex space-x-6;
+}
+
+/* Centered Container */
+.center-container {
+  @apply flex justify-center items-center min-h-screen px-4 py-8;
+}
+
+/* Form Elements */
+input, button {
+  @apply rounded-lg focus:outline-none transition-all duration-300;
+}
+
+input {
+  @apply p-4 mb-4 border-2 border-gray-500 focus:border-purple-600 focus:ring-2 focus:ring-purple-400 w-full shadow-sm;
+}
+
+button {
+  @apply py-3 px-6 bg-gradient-to-r from-purple-700 to-purple-800 text-white font-bold hover:bg-gradient-to-l from-purple-600 to-purple-700 transition-all duration-300 w-full shadow-md;
+}
+
+/* SignUpPage */
+.signup-container {
+  @apply bg-gray-800 p-12 rounded-3xl shadow-lg max-w-md w-full mx-auto;
+}
+
+.signup-heading {
+  @apply text-4xl text-purple-600 mb-8 text-center;
+}
+
+.signup-form {
+  @apply flex flex-col;
+}
+
+.signup-input {
+  @apply p-4 mb-6 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-400;
+}
+
+.signup-button {
+  @apply py-3 px-6 bg-gradient-to-r from-purple-700 to-purple-800 text-white font-bold hover:bg-gradient-to-l from-purple-600 to-purple-700 transition-all duration-300 w-full;
+}
+
+.signup-footer {
+  @apply text-center mt-6 opacity-80;
+}
+
+.signup-footer a {
+  @apply text-purple-400 hover:text-purple-500 underline;
+}
+
+/* LoginPage */
+.login-container {
+  @apply bg-gray-800 p-12 rounded-3xl shadow-lg max-w-md w-full mx-auto;
+}
+
+.login-heading {
+  @apply text-4xl text-purple-600 mb-8 text-center;
+}
+
+.login-form {
+  @apply flex flex-col;
+}
+
+.login-input {
+  @apply p-4 mb-6 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-400;
+}
+
+.login-button {
+  @apply py-3 px-6 bg-gradient-to-r from-purple-700 to-purple-800 text-white font-bold hover:bg-gradient-to-l from-purple-600 to-purple-700 transition-all duration-300 w-full;
+}
+
+.login-footer {
+  @apply text-center mt-6 opacity-80;
+}
+
+.login-footer a {
+  @apply text-purple-400 hover:text-purple-500 underline;
+}
+
+/* Menu Section */
+.menu-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 py-8 w-full;
+}
+
+.menu-item {
+  @apply bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center;
+}
+
+.menu-item h3 {
+  @apply text-xl text-purple-600 font-semibold mb-4;
+}
+
+.menu-item p {
+  @apply text-sm text-gray-400 mb-4;
+}
+
+.menu-item .price {
+  @apply text-lg font-semibold text-red-500 mb-4;
+}
+
+.menu-item button {
+  @apply bg-gradient-to-r from-purple-700 to-purple-800 text-white py-2 px-6 rounded-lg mt-4 transition-all duration-300 hover:bg-gradient-to-l from-purple-600 to-purple-700 shadow-md;
+}
+
+.menu-item button:hover {
+  @apply shadow-lg;
+}
+
+/* Basket Page */
+.basket-container {
+  @apply bg-gray-800 p-8 rounded-2xl shadow-lg w-full max-w-xl mx-auto mt-8;
+  margin-top: 60px;
+}
+
+.basket-heading {
+  @apply text-3xl text-purple-600 font-semibold mb-6 text-center;
+}
+
+.basket-list {
+  @apply space-y-4;
+}
+
+.basket-item {
+  @apply flex justify-between items-center p-4 border-b border-gray-500;
+}
+
+.basket-item-name {
+  @apply text-lg text-purple-600;
+}
+
+.basket-item-price {
+  @apply text-lg text-red-500;
+}
+
+.remove-basket-item {
+  @apply bg-red-600 text-white py-2 px-6 rounded-lg text-sm transition-all duration-300 hover:bg-red-700 shadow-md;
+}
+
+.remove-basket-item:hover {
+  @apply shadow-lg;
+}
+
+.basket-total {
+  @apply flex justify-between mt-8 text-xl font-semibold;
+}
+
+.total-label {
+  @apply text-gray-400;
+}
+
+.total-price {
+  @apply text-red-500;
+}
+
+/* Footer */
+.footer-container {
+  @apply bg-gray-900 text-white p-8 mt-16;
+}
+
+.footer-content {
+  @apply max-w-6xl mx-auto text-center;
+}
+
+.footer-content h3 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.footer-content p {
+  @apply text-lg text-gray-400;
+}
+
+
+.dish-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.dish-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dish-image {
+  height: 160px;
+  background-color: #e9d5ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.dish-name {
+  font-size: 1.5rem;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.dish-price {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.dish-actions {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dish-quantity {
+  width: 64px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.dish-button {
+  padding: 8px 16px;
+  background-color: #16a34a;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.dish-button:hover {
+  background-color: #15803d;
+}
+
+/* Menu Page */
+.menu-page-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6A0DAD;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  color: #FF0000;
+  margin-bottom: 1rem;
+}
+
+.start-order-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #6A0DAD;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.start-order-btn:hover {
+  background-color: #7B1FA2;
+}
+
+.loader {
+  font-size: 1.5rem;
+  color: #6A0DAD;
+}
+
+.menu-categories-container {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-categories {
+  margin-top: 2rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6A0DAD;
+  margin-bottom: 1rem;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.view-basket-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #6A0DAD;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.view-basket-btn:hover {
+  background-color: #7B1FA2;
+}
+
+
+.adminPage {
+  margin-top: 60px;
+}
