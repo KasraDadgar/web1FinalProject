@@ -10,13 +10,14 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    e.preventDefault();  // Prevent the default form behavior
 
     if (!email || !password) {
       setError("Email and password are required");
       return;
     }
 
-    
+    try {
       const response = await fetch("https://web1finalprojectbackend.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
@@ -25,7 +26,15 @@ const SignUpPage = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      
+      if (response.ok) {
+        window.location.assign("/login");  // Redirect to login after successful signup
+      } else {
+        const data = await response.json();
+        setError(data.message || "Registration failed");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -59,12 +68,13 @@ const SignUpPage = () => {
 
         <button type="submit" className="submit-button">Sign Up</button>
       </form>
+
       <p className="login-link">
         Already have an account? <Link to="/login" className="login-link-text">Log In</Link>
       </p>
-
     </div>
   );
 };
 
 export default SignUpPage;
+
