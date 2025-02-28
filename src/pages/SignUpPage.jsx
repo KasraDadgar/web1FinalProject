@@ -16,7 +16,7 @@ const SignUpPage = () => {
       return;
     }
 
-    try {
+    
       const response = await fetch("https://web1finalprojectbackend.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
@@ -25,15 +25,7 @@ const SignUpPage = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      if (response.ok) {
-        
-      } else {
-        const data = await response.json();
-        setError(data.message || "Registration failed");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
-    }
+      
   };
 
   return (
