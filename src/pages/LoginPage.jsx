@@ -39,7 +39,7 @@ const LoginPage = () => {
       {error && <p className="error-message">{error}</p>}
 
       <form onSubmit={handleSubmit}>
-        
+
         <div className="input-group">
           <label className="input-label" htmlFor="email">Email</label>
           <input
@@ -66,8 +66,9 @@ const LoginPage = () => {
       </form>
 
       <p className="signup-link">
-        Don't have an account? <a href="/signup" className="signup-link-text">Sign Up</a>
+        Don't have an account? <Link to="/signup" className="signup-link-text">Sign Up</Link>
       </p>
+
     </div>
   );
 };
