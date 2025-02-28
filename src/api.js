@@ -1,8 +1,8 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://web1finalprojectbackend.onrender.com/api";
 // Login User
 export const loginUser = async (email, password) => {
   try {
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("https://web1finalprojectbackend.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export const handleAddToBasket = async (item, setBasket) => {
 
 // Handle Login (Frontend)
 export const handleLogin = async (email, password, navigate) => {
-  const response = await fetch("http://localhost:5000/api/login", {
+  const response = await fetch("https://web1finalprojectbackend.onrender.com/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),

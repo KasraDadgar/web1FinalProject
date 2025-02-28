@@ -12,7 +12,7 @@ const AdminPage = () => {
 
   // Fetch the menu on component mount
   const fetchMenu = () => {
-    fetch("http://localhost:5000/api/menu", {
+    fetch("https://web1finalprojectbackend.onrender.com/api/menu", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -42,7 +42,7 @@ const AdminPage = () => {
       return;
     }
 
-    fetch("http://localhost:5000/api/admin/menu", {
+    fetch("https://web1finalprojectbackend.onrender.com/api/admin/menu", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const AdminPage = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/api/admin/menu/${editingDish.id}`, {
+    fetch(`https://web1finalprojectbackend.onrender.com/api/admin/menu/${editingDish.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const AdminPage = () => {
 
   // Delete a dish
   const handleDeleteDish = (dishId, category) => {
-    fetch(`http://localhost:5000/api/admin/menu/${dishId}`, {
+    fetch(`https://web1finalprojectbackend.onrender.com/api/admin/menu/${dishId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
