@@ -26,9 +26,7 @@ const SignUpPage = () => {
       });
 
       if (response.ok) {
-        <p className="login-link">
-        Account successfully added<Link to="/login" className="login-link-text">Log In</Link>
-      </p>
+        window.location.assign("/login"); 
       } else {
         const data = await response.json();
         setError(data.message || "Registration failed");
