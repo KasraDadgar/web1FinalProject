@@ -26,7 +26,7 @@ const SignUpPage = () => {
       });
 
       if (response.ok) {
-        window.location.href = "/login";
+        window.location.replace("/login");
       } else {
         const data = await response.json();
         setError(data.message || "Registration failed");
