@@ -12,8 +12,6 @@ function App() {
     <Router>
       <div className="app-container">
         <Routes>
-
-          
           <Route
             path="/"
             element={
@@ -31,7 +29,6 @@ function App() {
               </div>
             }
           />
-
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/menu" element={<MenuPage />} />
