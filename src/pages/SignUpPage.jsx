@@ -27,7 +27,7 @@ const SignUpPage = () => {
       });
 
       if (response.ok) {
-        window.location.assign("/login");  // Redirect to login after successful signup
+        navigate("/login");
       } else {
         const data = await response.json();
         setError(data.message || "Registration failed");
