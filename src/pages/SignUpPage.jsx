@@ -26,7 +26,7 @@ const SignUpPage = () => {
       });
 
       if (response.ok) {
-        window.location.replace("/login");
+        <Link to="/login" className="login-link-text">Log In</Link>
       } else {
         const data = await response.json();
         setError(data.message || "Registration failed");
